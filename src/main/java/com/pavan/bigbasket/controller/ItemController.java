@@ -24,8 +24,6 @@ public class ItemController {
         return ResponseEntity.ok(itemService.getAll());
     }
 
-
-
     @PostMapping
     public ResponseEntity<UUID> saveItem(@RequestBody Item item) {
         return new ResponseEntity<>(itemService.saveItem(item), HttpStatus.CREATED);
