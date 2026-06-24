@@ -18,11 +18,13 @@ public class ItemController {
 
     private final ItemService itemService;
 
-
     @GetMapping
     public ResponseEntity<List<Item>> getAllItems() {
+        System.out.println("Hi");
         return ResponseEntity.ok(itemService.getAll());
     }
+
+
 
     @PostMapping
     public ResponseEntity<UUID> saveItem(@RequestBody Item item) {
