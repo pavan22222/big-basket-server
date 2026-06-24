@@ -18,9 +18,6 @@ public class ItemController {
 
     private final ItemService itemService;
 
-
-
-
     @GetMapping
     public ResponseEntity<List<Item>> getAllItems() {
         System.out.println("Hi");
@@ -30,6 +27,11 @@ public class ItemController {
     @PostMapping
     public ResponseEntity<UUID> saveItem(@RequestBody Item item) {
         return new ResponseEntity<>(itemService.saveItem(item), HttpStatus.CREATED);
+    }
+
+    @DeleteMapping("/{itemId}")
+    public ResponseEntity<String> deleteItem(@PathVariable UUID itemId) {
+        return new ResponseEntity<>(itemService.deleteItem(itemId), HttpStatus.NO_CONTENT);
     }
 
 

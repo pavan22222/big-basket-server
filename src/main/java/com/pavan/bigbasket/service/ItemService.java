@@ -26,5 +26,11 @@ public class ItemService {
         return itemRespository.save(item).getId();
     }
 
+    @Transactional
+    public String deleteItem(UUID itemId) {
+        itemRespository.deleteById(itemId);
+        return itemId + "deleted successfully";
+    }
+
 
 }
