@@ -21,6 +21,7 @@ public class ItemController {
 
     @GetMapping
     public ResponseEntity<List<Item>> getAllItems() {
+        System.out.println("Hi");
         return ResponseEntity.ok(itemService.getAll());
     }
 
