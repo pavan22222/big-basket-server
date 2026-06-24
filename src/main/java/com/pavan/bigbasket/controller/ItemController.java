@@ -31,5 +31,10 @@ public class ItemController {
         return new ResponseEntity<>(itemService.saveItem(item), HttpStatus.CREATED);
     }
 
+    @DeleteMapping("/{itemId}")
+    public ResponseEntity<String> deleteItem(@PathVariable UUID itemId) {
+        return new ResponseEntity<>(itemService.deleteItem(itemId), HttpStatus.NO_CONTENT);
+    }
+
 
 }
