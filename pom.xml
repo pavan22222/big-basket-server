@@ -5,12 +5,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.5</version>
+        <version>3.5.7</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.pavan.bigbasket</groupId>
-    <artifactId>big-basket-server-jar</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>big-basket-server</artifactId>
+    <version>1.0</version>
     <name>big-basket-server</name>
     <description>big-basket-server</description>
     <url/>
