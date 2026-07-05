@@ -13,10 +13,13 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/items")
-@AllArgsConstructor
 public class ItemController {
 
     private final ItemService itemService;
+
+    public ItemController(ItemService itemService) {
+        this.itemService = itemService;
+    }
 
     @GetMapping
     public ResponseEntity<List<Item>> getAllItems() {

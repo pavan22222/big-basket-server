@@ -2,8 +2,6 @@ package com.pavan.bigbasket.controller;
 
 
 import com.pavan.bigbasket.domain.Address;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,8 +15,8 @@ public class AddressController {
 
     @GetMapping
     public ResponseEntity<List<Address>> getAll() {
-        Address address1 = Address.builder().id(UUID.randomUUID()).city("Hyd").build();
-        Address address2 = Address.builder().id(UUID.randomUUID()).city("Chennai").build();
+        Address address1 = new Address(UUID.randomUUID(), "Hyd");
+        Address address2 = new Address(UUID.randomUUID(),"Chennai");
         return ResponseEntity.ok(List.of(address1, address2));
     }
 

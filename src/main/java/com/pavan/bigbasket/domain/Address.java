@@ -9,10 +9,6 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "addresses")
-@AllArgsConstructor
-@NoArgsConstructor
-@Data
-@Builder
 public class Address {
 
     @Id
@@ -20,5 +16,24 @@ public class Address {
 
     private String city;
 
+    public Address(UUID id, String city) {
+        this.id = id;
+        this.city = city;
+    }
 
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 }
